@@ -1,0 +1,7 @@
+# Ignore node_modules in Server and Client
+Server/node_modules
+Client/node_modules
+
+# Optionally ignore other files like logs or environment variables
+*.log
+.env
