@@ -4,6 +4,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const {createHotleSphereTables} = require('./models/tableCreations');
 const userRouters = require('./routes/usersRoutes');
+const hotelRouters = require('./routes/hotelsRoutes');
 // Initialize the App
 const app = express();
 
@@ -20,6 +21,7 @@ createHotleSphereTables();
 
 // Define all Routes here
 app.use('/api/users', userRouters);
+app.use('/api/hotels', hotelRouters);
 
 // Start the server
 const PORT = process.env.PORT || 5001;
